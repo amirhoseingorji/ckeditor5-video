@@ -35,7 +35,7 @@ export default class InsertVideoCommand extends Command {
       const selectedElement = selection.getSelectedElement();
 
       if (typeof sourceDefinition === "string") {
-        sourceDefinition = { src: sourceDefinition };
+        sourceDefinition = { src: sourceDefinition, controls: true };
       }
 
       if (index && selectedElement && videoUtils.isVideo(selectedElement)) {

@@ -26,6 +26,7 @@ export function getVideoViewElementMatcher(editor, matchVideoType) {
       name: "video",
       attributes: {
         src: true,
+        controls: true,
       },
     };
   }
@@ -48,7 +49,7 @@ export function getVideoViewElementMatcher(editor, matchVideoType) {
       return null;
     }
 
-    return { name: true, attributes: ["src"] };
+    return { name: true, attributes: ["src", "controls"] };
   };
 }
 

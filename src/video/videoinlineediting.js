@@ -28,7 +28,7 @@ export default class VideoInlineEditing extends Plugin {
       isObject: true,
       isInline: true,
       allowWhere: "$text",
-      allowAttributes: ["src"],
+      allowAttributes: ["src", "controls"],
     });
 
     schema.addChildCheck((context, childDefinition) => {
@@ -82,6 +82,7 @@ export default class VideoInlineEditing extends Plugin {
       model: (viewVideo, { writer }) =>
         writer.createElement("videoInline", {
           src: viewVideo.getAttribute("src"),
+          controls: viewVideo.getAttribute("controls") || true,
         }),
     });
   }
