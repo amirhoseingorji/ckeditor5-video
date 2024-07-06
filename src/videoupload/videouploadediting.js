@@ -8,7 +8,7 @@ import VideoUtils from "../videoutils";
 import UploadVideoCommand from "./uploadvideocommand";
 import { fetchLocalVideo, isLocalVideo, createVideoTypeRegExp } from "./utils";
 
-const DEFAULT_VIDEO_EXTENSIONS = ["mp4", "webm", "ogg"];
+const DEFAULT_VIDEO_EXTENSIONS = ["mp4", "webm", "ogg", "mp3", "wav"];
 
 export default class VideoUploadEditing extends Plugin {
   static get requires() {

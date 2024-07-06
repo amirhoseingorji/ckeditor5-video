@@ -44,6 +44,8 @@ function getVideoMimeType(blob, src) {
     return blob.type;
   } else if (src.match(/data:(video\/\w+);base64/)) {
     return src.match(/data:(video\/\w+);base64/)[1].toLowerCase();
+  } else if (src.match(/data:(audio\/\w+);base64/)) {
+    return src.match(/data:(audio\/\w+);base64/)[1].toLowerCase();
   } else {
     // Fallback to 'mp4' as common extension.
     return "video/mp4";

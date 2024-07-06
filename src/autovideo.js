@@ -9,7 +9,7 @@ import VideoUtils from "./videoutils";
 const VIDEO_URL_REGEXP = new RegExp(
   String(
     /^(http(s)?:\/\/)?[\w-]+\.[\w.~:/[\]@!$&'()*+,;=%-]+/.source +
-      /\.(mp4|webm|ogg|ogv|avi|wmv|mkv|mpeg2|mov|MP4|WEBM|OGG|OGV|AVI|WMV|MKV|MPEG2|MOV)/
+      /\.(mp4|webm|ogg|ogv|avi|wmv|mkv|mpeg2|mov|MP4|WEBM|OGG|OGV|AVI|WMV|MKV|MPEG2|MOV|mp3|MP3)/
         .source +
       /(\?[\w.~:/[\]@!$&'()*+,;=%-]*)?/.source +
       /(#[\w.~:/[\]@!$&'()*+,;=%-]*)?$/.source
