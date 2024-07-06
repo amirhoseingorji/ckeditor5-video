@@ -15,7 +15,8 @@ export default class VideoUploadUI extends Plugin {
       const videoMediaTypesRegExp = createVideoTypeRegExp(videoTypes);
 
       view.set({
-        acceptedType: videoTypes.map((type) => `video/${type}`).join(","),
+        acceptedType:
+          videoTypes.map((type) => `video/${type}`).join(",") + ",audio/mp3",
         allowMultipleFiles: editor.config.get(
           "video.upload.allowMultipleFiles"
         ),
