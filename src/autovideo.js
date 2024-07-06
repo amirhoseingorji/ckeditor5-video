@@ -100,7 +100,7 @@ export default class AutoVideo extends Plugin {
 
     if (!src.match(VIDEO_URL_REGEXP)) {
       urlRange.detach();
-
+      console.log("!!!!!!first");
       return;
     }
 

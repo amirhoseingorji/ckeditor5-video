@@ -20,6 +20,7 @@ class VideoUploadAdapter {
 
   upload() {
     const uploadVideo = async (file) => {
+      console.log("first");
       this.loader.uploaded = false;
       return new Promise((resolve) => {
         setTimeout(() => {

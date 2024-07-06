@@ -31,10 +31,14 @@ export default class VideoUploadUI extends Plugin {
       view.buttonView.bind("isEnabled").to(command);
 
       view.on("done", (evt, files) => {
-        const videosToUpload = Array.from(files).filter((file) =>
-          videoMediaTypesRegExp.test(file.type)
-        );
-
+        console.log({ files: Array.from(files) });
+        const videosToUpload = Array.from(files).filter((file) => {
+          return (
+            ["audio", "video"].includes(file.type.split("/")[0]) ||
+            videoMediaTypesRegExp.test(file.type)
+          );
+        });
+        console.log({ videosToUpload });
         if (videosToUpload.length) {
           editor.execute("uploadVideo", { files: videosToUpload });
         }
